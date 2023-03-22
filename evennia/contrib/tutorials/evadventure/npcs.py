@@ -149,7 +149,7 @@ class EvAdventureTalkativeNPC(EvAdventureNPC):
 
         # since this is a @classmethod we can't use super() here
         new_object, errors = EvAdventureNPC.create(
-            key, account=account, attributes=(("menudata", menudata), ("menu_kwargs", menu_kwargs))
+            key, typeclass=EvAdventureTalkativeNPC, account=account, attributes=(("menudata", menudata), ("menu_kwargs", menu_kwargs))
         )
 
         return new_object, errors
